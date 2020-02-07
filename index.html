@@ -4,22 +4,89 @@
 		<title>Albir Tarsha Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Bootstrap 4.4.1 : Bootswatch : Superhero -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css">
+    <style>
+      main {margin: 4vw; }
+      #left-container { float: left; height:auto; max-width:45vw; 
+        background-color: brown;}
+      #right-container { float: right; display: block;
+        background-color: brown;}
+      img { height: auto; max-width: 35vw; display: block; }
+      .container {
+        display: grid;
+        grid-template-columns: 45vw auto 35vw;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "heading heading heading"
+          "project1-text . project1-img"
+          "project1-text . project1-img"
+          "project2-text . project2-img"
+          "project2-text . project2-img"
+          "footing footing footing";
+      }
+      .portfolio-heading { grid-area: heading; }
+      .portfolio-text1 { grid-area: project1-text; }
+      .portfolio-text2 { grid-area: project2-text; }
+      .portfolio-img1 { grid-area: project1-img; }
+      .portfolio-img2 { grid-area: project2-img; }
+      .portfolio-footing { grid-area: footing; }
+      @media (max-width: 550px) {
+        img { height: auto; max-width: 65vw;}
+        .container {
+          grid-template-areas: 
+            "heading heading heading"
+            "project1-img project1-img project1-img"
+            "project1-text project1-text project1-text"
+            "project2-img project2-img project2-img"
+            "project2-text project2-text project2-text"
+            "footing footing footing";
+        }
+      }
+    </style>
 	</head>
-	<body class="landing is-preload">
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Albir Tarsha</h2>
-							<p>Portfolio Page</p>
-              <ol>
-                <li><a href="https://mtsafe.github.io/FCC_Projects/">freeCodeCamp
-                  Projects: Responsive Web Design Certification</a></li>
-                <li><a href="https://mtsafe.github.io/Broke-As/">Broke-As:
-                  Cash Poor Cash Management</a></li>
-              </ol>
-              <code>Under Construction</code>
-						</div>
-					</section>
+	<body>
+		<main>
+      <div class="container">
+        <div class="portfolio-heading">
+      <h2>Albir Tarsha</h2>
+      <p>Portfolio Page</p>
+    </div>
+    <div class="portfolio-text1">
+      <ol>
+        <li><a href="https://mtsafe.github.io/FCC_Projects/">freeCodeCamp
+          Projects: Responsive Web Design Certification</a></li>
+        <ul>
+          <li>Developer Portfolio</li>
+          <li>Tribute Page</li>
+          <li>Landing Page</li>
+          <li>Form Page</li>
+          <li>Technical Page</li>
+        </ul>
+        </ol>
+      </div>
+      <div class="portfolio-text2">
+        <ol start="2">
+          <li><a href="https://mtsafe.github.io/Broke-As/">Broke-As:
+          Cash Poor Cash Management</a></li>
+        <ul>
+          <li>Landing Page with warning</li>
+          <li>Accounts Page for Cash CRUD</li>
+        </ul>
+      </ol>
+    </div>
+    <div class="portfolio-img1">
+      <img src="https://mtsafe.github.io/FCC_ScreenShot.png"
+      alt="freeCodeCamp 1st Projects">
+    </div>
+    <div class="portfolio-img2">
+    <img src="https://mtsafe.github.io/Broke-As_ScreenShot.png"
+      alt="Broke-As Cash Management Project">
+    </div>
+  </div>
+  <div class="portfolio-footing">
+  <code>Copyright &copy; 2020 Tarsha.Tech . All rights reserved.</code>
+</div>
+</main>
 	</body>
 </html>
