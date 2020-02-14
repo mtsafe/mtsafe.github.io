@@ -26,11 +26,18 @@
           "footing footing footing";
       }
       .portfolio-heading { grid-area: heading; }
-      .portfolio-text1 { grid-area: project1-text; }
-      .portfolio-text2 { grid-area: project2-text; }
-      .portfolio-img1 { grid-area: project1-img; }
-      .portfolio-img2 { grid-area: project2-img; }
+      #portfolio-text1 { grid-area: project1-text; }
+      #portfolio-text2 { grid-area: project2-text; }
+      #portfolio-img1 { grid-area: project1-img; }
+      #portfolio-img2 { grid-area: project2-img; }
       .portfolio-footing { grid-area: footing; }
+      img.portfolio-img:hover {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%) scale(2);
+      }
       @media (max-width: 550px) {
         img { height: auto; max-width: 65vw;}
         .container {
@@ -42,6 +49,13 @@
             "project2-text project2-text project2-text"
             "footing footing footing";
         }
+        img.portfolio-img:hover {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-50%, -50%) scale(1.5);
+        }
       }
     </style>
 	</head>
@@ -52,7 +66,7 @@
       <h2>Albir Tarsha</h2>
       <p>Portfolio Page</p>
     </div>
-    <div class="portfolio-text1">
+    <div id="portfolio-text1" class="portfolio-text">
       <ol>
         <li><a href="https://mtsafe.github.io/FCC_Projects/">freeCodeCamp
           Projects: Responsive Web Design Certification</a></li>
@@ -65,7 +79,7 @@
         </ul>
         </ol>
       </div>
-      <div class="portfolio-text2">
+      <div id="portfolio-text2" class="portfolio-text">
         <ol start="2">
           <li><a href="https://mtsafe.github.io/Broke-As/">Broke-As:
           Cash Poor Cash Management</a></li>
@@ -75,13 +89,17 @@
         </ul>
       </ol>
     </div>
-    <div class="portfolio-img1">
-      <img src="https://mtsafe.github.io/FCC_ScreenShot.png"
-      alt="freeCodeCamp 1st Projects">
+    <div id="portfolio-img1">
+      <a href="https://mtsafe.github.io/FCC_Projects/">
+        <img src="https://mtsafe.github.io/FCC_ScreenShot.png"
+          class="portfolio-img"
+          alt="freeCodeCamp 1st Projects"></a>
     </div>
-    <div class="portfolio-img2">
-    <img src="https://mtsafe.github.io/Broke-As_ScreenShot.png"
-      alt="Broke-As Cash Management Project">
+    <div id="portfolio-img2">
+      <a href="https://mtsafe.github.io/Broke-As/">
+      <img src="https://mtsafe.github.io/Broke-As_ScreenShot.png"
+        class="portfolio-img"
+        alt="Broke-As Cash Management Project"></a>
     </div>
   </div>
   <div class="portfolio-footing">
