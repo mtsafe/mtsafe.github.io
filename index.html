@@ -3,9 +3,11 @@
 	<head>
 		<title>Albir Tarsha Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
     <!-- Bootstrap 4.4.1 : Bootswatch : Superhero -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css">
     <style>
       main {margin: 4vw; }
       #left-container { float: left; height:auto; max-width:45vw; 
@@ -13,6 +15,7 @@
       #right-container { float: right; display: block;
         background-color: brown;}
       img { height: auto; max-width: 35vw; display: block; }
+      .btn { margin-left: 12px; }
       .container {
         display: grid;
         grid-template-columns: 45vw auto 35vw;
@@ -68,8 +71,16 @@
     </div>
     <div id="portfolio-text1" class="portfolio-text">
       <ol>
-        <li><a href="https://mtsafe.github.io/FCC_Projects/">freeCodeCamp
-          Projects: Responsive Web Design Certification</a></li>
+        <li><h4 class="text-primary"
+          >freeCodeCamp Projects: Responsive Web Design Certification</h4></li>
+        <div id="fcc-links">
+          <a href="https://github.com/mtsafe/FCC_Projects"><button
+            type="button" class="btn btn-outline-info"
+            ><i class="fab fa-github"></i> The Code</button></a>
+          <a href="https://mtsafe.github.io/FCC_Projects/"><button
+            type="button" class="btn btn-outline-success"
+            ><i class="fab fa-free-code-camp"></i> The Project</button></a>
+        </div>
         <ul>
           <li>Developer Portfolio</li>
           <li>Tribute Page</li>
@@ -81,9 +92,17 @@
       </div>
       <div id="portfolio-text2" class="portfolio-text">
         <ol start="2">
-          <li><a href="https://mtsafe.github.io/Broke-As/">Broke-As:
-          Cash Poor Cash Management</a></li>
-        <ul>
+          <li><h4 class="text-primary"
+            >Broke-As: Cash Poor Cash Management</h4></li>
+          <div id="fcc-links">
+            <a href="https://github.com/mtsafe/Broke-As"><button
+              type="button" class="btn btn-outline-info"
+              ><i class="fab fa-github"></i> The Code</button></a>
+            <a href="https://mtsafe.github.io/Broke-As/"><button
+              type="button" class="btn btn-outline-success"
+              ><i class="fab fa-free-code-camp"></i> The Project</button></a>
+          </div>
+          <ul>
           <li>Landing Page with warning</li>
           <li>Accounts Page for Cash CRUD</li>
         </ul>
@@ -106,5 +125,8 @@
   <code>Copyright &copy; 2020 Tarsha.Tech . All rights reserved.</code>
 </div>
 </main>
+    <!-- Font Awesome 5.12.1 : cdn : brands -->
+    <script src="https://kit.fontawesome.com/7a5ace3fc0.js"
+      crossorigin="anonymous"></script>
 	</body>
 </html>
