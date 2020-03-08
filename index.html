@@ -11,12 +11,23 @@
     <style>
       /* Font Awesome */
       @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-      main {margin: 4vw; }
+      main { margin: 4vw; }
       #left-container { float: left; height:auto; max-width:45vw; 
         background-color: brown;}
       #right-container { float: right; display: block;
         background-color: brown;}
       img { height: auto; max-width: 35vw; display: block; }
+      div#portfolio-img1, div#portfolio-img2 {
+        text-align: center;
+      }
+      .heading-container {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+      .footing-container {
+        margin-left: 60px;
+        margin-right: 60px;
+      }
       .btn { margin-left: 12px; }
       .container {
         display: grid;
@@ -41,9 +52,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(2);
-      }
-      code {
-        padding-left: 80px;
       }
       @media (max-width: 550px) {
         img { height: auto; max-width: 65vw;}
@@ -70,8 +78,10 @@
     <main>
       <div class="container">
         <div class="portfolio-heading">
-          <h2>Albir Tarsha</h2>
-          <p>Portfolio Page</p>
+          <div class="heading-container">
+            <h2>Albir Tarsha</h2>
+            <p>Portfolio Page</p>
+          </div>
         </div>
         <div id="portfolio-text1" class="portfolio-text">
           <ol>
@@ -87,9 +97,8 @@
                 ><i class="fa fa-free-code-camp"></i> The Project</button></a>
             </div>
             <dl>
-              <dt class="text-warning">Problem</dt>
-              <dd>Many people are "cash poor" or simply on a tight budget.
-                As tempting as it may be to use credit this can end badly.
+              <dt class="text-warning">Challenge</dt>
+              <dd>Illustrate responsive design by creating these 5 web pages using HTML & CSS.
               </dd>
             </dl>
             <ul>
@@ -129,13 +138,13 @@
             </dl>
           </ol>
         </div>
-        <div id="portfolio-img1">
+        <div id="portfolio-img1" class="d-flex justify-content-center">
           <a href="https://mtsafe.github.io/FCC_Projects/">
             <img src="https://mtsafe.github.io/FCC_ScreenShot.png"
               class="portfolio-img"
               alt="freeCodeCamp 1st Projects"></a>
         </div>
-        <div id="portfolio-img2">
+        <div id="portfolio-img2" class="d-flex justify-content-center">
           <a href="https://mtsafe.github.io/Broke-As/">
             <img src="https://mtsafe.github.io/Broke-As_ScreenShot.png"
               class="portfolio-img"
@@ -144,7 +153,9 @@
       </div>
     </main>
     <footer class="portfolio-footing">
-      <code>Copyright &copy; 2020 Tarsha.Tech . All rights reserved.</code>
+      <div class="footing-container">
+        <code>Copyright &copy; 2020 Tarsha.Tech . All rights reserved.</code>
+      </div>
     </footer>
   </body>
 </html>
